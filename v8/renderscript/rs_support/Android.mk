@@ -178,7 +178,7 @@ LOCAL_NDK_STL_VARIANT := c++_static
 ifeq ($(TARGET_USES_QSML),true)
     LOCAL_REQUIRED_MODULES := libQSML-0.15.2
     LOCAL_C_INCLUDES += vendor/qcom/perf/$(TARGET_ARCH)/include
-    LOCAL_CFLAGS += -DUSE_QSML
+    LOCAL_CFLAGS += -DUSE_QSML -fopenmp
 else
     LOCAL_REQUIRED_MODULES := libblasV8
     LOCAL_C_INCLUDES += external/cblas/include
